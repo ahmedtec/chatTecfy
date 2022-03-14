@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+  <div class="the_chat_app_icon" id="the_chat_app_icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        d="M2 8.994A5.99 5.99 0 0 1 8 3h8c3.313 0 6 2.695 6 5.994V21H8c-3.313 0-6-2.695-6-5.994V8.994zM14 11v2h2v-2h-2zm-6 0v2h2v-2H8z"
+        fill="rgba(255,255,255,1)" />
+    </svg>
+  </div>
+  <!-- the_chat_app -->
+  <div class="the_chat_app" id="the_chat_app">
+    <!-- chat_header -->
+    <div class="chat_header">
+      <div class="chat_header_box">
+        <div class="title">Tecfy</div>
+        <div class="sub">Start Chat</div>
+      </div>
+      <div class="close" id="close_">
+        ✖
+      </div>
+    </div>
+    <!-- chat_header // -->
+    <!-- chat_box  -->
+    <div class="chat_box" id="chat_box_">
+      <!-- login  -->
+      <div id="login_chat_app">
+        <p> you shoud login first before start chat</p>
+        <p id="login_p"></p>
+        <input type="text" name="name" id="login_name" placeholder="Name">
+        <input type="email" name="email" id="login_email" placeholder="Email">
+        <input type="text" name="pone" id="login_phone" placeholder="Phone">
+        <button id="loginNow">Login</button>
+      </div>
+      <!-- login // -->
+      <!-- text -->
+      <!-- <div class="text support">
+        heloww
+      </div> -->
+      <!-- text // -->
+      <!-- img -->
+      <!-- <div class="img support">
+        <img src="./icons8-mosque-96.png" alt="">
+      </div> -->
+      <!-- img // -->
+      <!-- text -->
+      <!-- <div class="text">
+        heloww
+      </div> -->
+      <!-- text // -->
+      <!-- img -->
+      <!-- <div class="img">
+        <img src="./icons8-mosque-96.png" alt="">
+      </div> -->
+      <!-- img // -->
+    </div>
+    <!-- chat_box //  -->
+    <!-- the_send_box  -->
+    <div class="the_send_box" id="the_send_box_">
+      <!-- the_send_box_file_input -->
+      <input id="the_send_box_file_input" type="file" name="name" style="display: none;" />
+      <!-- the_send_box_file_input //  -->
+      <!-- poweredby -->
+      <div class="poweredby">
+        <a href="#" target="_blank">
+          <p>PoweredBy Tecfy</p> <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEeSURBVHgBXVC7SgNRED0zebgugommsvHRWdhY+A+CCCEWVqLF7h9YCILYpLJIvSwSEKwUq4ClpYJY2whuIWiaDQhhQXfG2TXGJFPcmXvPYw6XMCjf910R2bBxlYjKqvoQhuH9H07Z4Xley1pi4K2BdwPhut33TNQNgqBJuI73iXBmmnlA+0p8DtXIHI6NP2tvn6p0WESadLTkfiP9egSVdm3HohFnlNC22TbpFlQ6jELFJU2PsFN7BksL/6HaqFdfCdyA4xYYjekISk4O1qu9IbHsxHkXnUP3/YOzWYELXPVWMFmXbzVlfsLBcpITwZaFdNuy0Rhxyt00y9Ph9+R1Ey+x8IlkUpGIiRaEtJnlHCf+kivmvAZN+0DxZTTzD9ZMbFWg4pRdAAAAAElFTkSuQmCC"
+            alt="">
+        </a>
+      </div>
+      <!-- poweredby // -->
+      <!-- send_box -->
+      <div class="send_box">
+        <!-- files -->
+        
+        <ul id="files">
+          <!-- file -->
+          <!-- <li class="file">
+            <p class="name">name of file name of file name of file name of file</p>
+            <div id="delate_file">
+              <p class="size">18,9kB</p>
+              <p class="close_file">✖</p>
+            </div>
+          </li> -->
+          <!-- file // -->
+          <!-- file -->
+          <!-- <li class="file">
+            <p class="name">name of file</p>
+            <div id="delate_file">
+              <p class="size">18,9kB</p>
+              <p class="close_file" onClick="reply_click(attatchFile_remove.id)">✖</p>
+            </div>
+          </li> -->
+          <!-- file // -->
+        </ul>
+        <!-- files// -->
+        <input type="text" id="text_">
+        <button id="attach">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14 13.5V8C14 6.93913 13.5786 5.92172 12.8284 5.17157C12.0783 4.42143 11.0609 4 10 4C8.93913 4 7.92172 4.42143 7.17157 5.17157C6.42143 5.92172 6 6.93913 6 8V13.5C6 15.2239 6.68482 16.8772 7.90381 18.0962C9.12279 19.3152 10.7761 20 12.5 20C14.2239 20 15.8772 19.3152 17.0962 18.0962C18.3152 16.8772 19 15.2239 19 13.5V4H21V13.5C21 15.7543 20.1045 17.9163 18.5104 19.5104C16.9163 21.1045 14.7543 22 12.5 22C10.2457 22 8.08365 21.1045 6.48959 19.5104C4.89553 17.9163 4 15.7543 4 13.5V8C4 6.4087 4.63214 4.88258 5.75736 3.75736C6.88258 2.63214 8.4087 2 10 2C11.5913 2 13.1174 2.63214 14.2426 3.75736C15.3679 4.88258 16 6.4087 16 8V13.5C16 14.4283 15.6313 15.3185 14.9749 15.9749C14.3185 16.6313 13.4283 17 12.5 17C11.5717 17 10.6815 16.6313 10.0251 15.9749C9.36875 15.3185 9 14.4283 9 13.5V8H11V13.5C11 13.8978 11.158 14.2794 11.4393 14.5607C11.7206 14.842 12.1022 15 12.5 15C12.8978 15 13.2794 14.842 13.5607 14.5607C13.842 14.2794 14 13.8978 14 13.5V13.5Z"
+              fill="black" />
+          </svg>
+        </button>
+        <button id="run_send">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3 13H9V11H3V1.84598C3.00001 1.7591 3.02267 1.67372 3.06573 1.59825C3.1088 1.52279 3.17078 1.45985 3.24558 1.41564C3.32037 1.37143 3.4054 1.34747 3.49227 1.34613C3.57915 1.34479 3.66487 1.36611 3.741 1.40798L22.203 11.562C22.2814 11.6051 22.3468 11.6686 22.3923 11.7456C22.4378 11.8226 22.4618 11.9105 22.4618 12C22.4618 12.0895 22.4378 12.1773 22.3923 12.2544C22.3468 12.3314 22.2814 12.3948 22.203 12.438L3.741 22.592C3.66487 22.6339 3.57915 22.6552 3.49227 22.6538C3.4054 22.6525 3.32037 22.6285 3.24558 22.5843C3.17078 22.5401 3.1088 22.4772 3.06573 22.4017C3.02267 22.3262 3.00001 22.2409 3 22.154V13Z"
+              fill="#134692" />
+          </svg>
+        </button>
+      </div>
+      <!-- send_box -->
+    </div>
+    <!-- the_send_box  -->
+  </div>
+  <!-- the_chat_app //-->
+  <script src="./app.js"></script>
+</body>
+
+</html>
