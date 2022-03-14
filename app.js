@@ -223,6 +223,15 @@ function sendmasseg(masseg) {
   chat_box.scrollTop = chat_box.scrollHeight;
 }
 function sendimg(img) {
+  let localStorage_history = JSON.parse(localStorage.getItem("chat_history"))
+  localStorage_history.push(
+    {
+      type: "Image",
+      url: img,
+      isSend: false
+    }
+  )
+  localStorage.setItem("chat_history", JSON.stringify(localStorage_history))
   document.getElementById("chat_box_").innerHTML += `<div class="img support"> <img src="${img}" alt=""> </div>`
   chat_box.scrollTop = chat_box.scrollHeight;
 }
@@ -252,8 +261,8 @@ function initSocket() {
         console.log("ms.data.message.text",ms.data.message.text);
         sendmasseg(ms.data.message.text)
       }
-      if (ms.data.message.type == "Image") {
-        sendimg(ms.url)
+      if (ms.data.message.type == "image") {
+        sendimg(ms.data.message.url)
       }
     }
 
